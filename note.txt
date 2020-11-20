@@ -1,0 +1,22 @@
+android:keepScreenOn="true"
+这个表示某个view是否让屏幕常亮
+
+View下的方法
+public boolean postDelayed (Runnable action, long delayMillis)
+这个表示等待一段时间后执行Runnable代码块
+
+companion object 修饰为伴生对象,伴生对象在类中只能存在一个，类似于java中的静态方法 Java 中使用类访问静态成员，静态方法。
+PERMISSIONS_REQUIRED.all {
+            ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
+        }
+all的使用方法，all中嵌套有用表达式
+
+
+Navigation的使用
+Navigation 组件旨在用于具有一个主 Activity 和多个 Fragment 目的地的应用。主 Activity 与导航图相关联，且包含一个负责根据需要交换目的地的 NavHostFragment。在具有多个 Activity 目的地的应用中，每个 Activity 均拥有其自己的导航图。
+android:name 属性包含 NavHost 实现的类名称。
+app:navGraph 属性将 NavHostFragment 与导航图相关联。导航图会在此 NavHostFragment 中指定用户可以导航到的所有目的地。
+app:defaultNavHost="true" 属性确保您的 NavHostFragment 会拦截系统返回按钮。请注意，只能有一个默认 NavHost。如果同一布局（例如，双窗格布局）中有多个主机，请务必仅指定一个默认 NavHost。
+
+有什么编程问题，先百度搜索，没有结果直接看安卓编程手册
+使用context.resources.openRawResource(fileId)方法可以访问到raw下的文件
